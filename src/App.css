@@ -1,0 +1,114 @@
+
+.App {
+  font-family: cursive;
+}
+.container{
+  margin: auto;
+  padding: 20px;
+}
+.App-Header{
+  min-height: 66px;
+  background-color: rgb(184, 184, 184);
+  display: block;
+  position: relative;
+}
+.login-heading{
+  text-align: center;
+  margin: 20px;
+}
+.navigation{
+  float: right;
+  overflow: hidden;
+}
+.navigation-right{
+  display: inline-block;
+
+}
+.navigation a{
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 27px;
+}
+.btnlogout{
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 27px;
+  cursor: pointer;
+}
+.form{
+  max-width: 500px;
+  margin:auto;
+}
+.site-name{
+  clear: right;
+  margin: 10px 0px 0px 10px;
+  float: left;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.site-name:hover{
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
+.App-Container{
+  background-color: azure;
+  overflow: hidden;
+  margin: auto;
+  padding: 40px;
+}
+.App-footer{
+  background-color: rgb(184, 184, 184);
+  height: 50px;
+  clear: both;
+}
+.footer-data{
+  text-align: center;
+  margin: 0px;
+}
+.persons{
+  margin: 0 20px;
+  text-align: left;
+}
+.personNumber{
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  background: cornsilk;
+  margin:5px;
+  border-radius: 5px;
+}
+.cardView{
+  max-width: 90%;
+  margin: auto;
+  padding: 10px 5px;
+  background-color: rgba(255, 248, 248, 0.952);
+  border-radius: 10px;
+  margin-top: 10px;
+
+}
+.submitbtn{
+  background-color: rgb(184, 184, 184);
+  margin: 20px 0 0 0;
+  border-color: rgb(184, 184, 184);
+}
+.handlebtn{
+  float: right;
+  margin: 0 10px 10px 10px;
+  background-color: rgb(184, 184, 184);
+  border-color: rgb(184, 184, 184);
+  color: black
+}
+.clear{
+  clear: both;
+}
+.homepage{
+  text-align: center;
+  margin: 100px 0 100px 0;
+}
