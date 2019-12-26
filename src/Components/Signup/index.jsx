@@ -13,17 +13,31 @@ export default withFormik({
   }),
   
   validationSchema: Yup.object().shape({
-    name: Yup.string().required("Name is required "),
+    name: Yup.string().min(3).required("Name is required "),
+    // email: Yup.string()
+    //           .matches(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,"enetr valid email address")
+    //           .required("Email id is required"),
+    password: Yup.string()
+                  .matches(/^[A-Za-z]\w{7,14}$/,"password must be contain 7 to 14 character exclude special charecter")
+                  .required("Password is required"),
+    confirm_password: Yup.string()
+                          .oneOf([Yup.ref('password'), null],"Password don't match")
+                          .required('Password confirm is required')
   }),
 
-  handleSubmit(values,  { setSubmitting }){
+  handleSubmit(values,  { setSubmitting, resetForm }){
     const { name, email, password } = values
     console.log( name)
     Axios.post("http://5dfb61d30301690014b8fa75.mockapi.io/sigup",{
       name,
       email,
       password
-  }).then((response)=> {console.log(response)}).catch()
+  }).then((response)=> {
+    alert(`Hello ${response.data.name}! you are successfully register`)
+  }).catch((error)=> {
+    console.log(error)
+  })
+  resetForm();
     // console.log(props)
   }
 })(Signup);

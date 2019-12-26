@@ -11,12 +11,6 @@ class Login extends React.Component {
 				confirm: false,
 		}
 	}
-	// componentWillMount() {
-	// 	if(localStorage.getItem("Email")){
-	// 		console.log("this is log")
-	// 		this.props.history.push('/mysite')
-	// 	}
-	// }
 	componentDidMount(){
 		Axios.get('http://5dfb61d30301690014b8fa75.mockapi.io/sigup').then((response)=>{
 			this.setState({data: response.data})
@@ -34,29 +28,30 @@ class Login extends React.Component {
 	submitHandler = (event) => {
 		event.preventDefault();
 		this.state.data.map((value)=>{
-			if(value.email === this.state.email && value.password === this.state.password){
-				this.props.history.push("/post");
-				localStorage.setItem("tokan", value.email )
-				this.setState({confirm: true})
+			if(value.email === this.state.email){
+				if(value.password === this.state.password){
+					this.props.history.push("/post");
+					localStorage.setItem("tokan", JSON.stringify(value) )
+				}
+				else{
+					console.log("password is incorrect")
+				}
 			}
+			return null
 		})
-		// localStorage.setItem("Email", "abc@gmail.com"); //set email id : abc@gmail.com
-		// localStorage.setItem("Password", "123"); // set password : 123
-		// let email = this.state.email;
-		// let pass = this.state.password;
-		// if (localStorage.getItem("Email") === email && localStorage.getItem("Password") === pass) {
-		// 		this.props.history.push("/post");
-		// }
-		// else {
-		// 		alert('Enter Valid Input');
-		// }
+		if(localStorage.getItem("tokan")){
+			console.log("successfull")
+		}
+		else{
+			alert("Please register your email id")
+			this.props.history.push("/signup");
+		}
 	}
 	render() {
 		return (
 			<div className="App-Container">
 				<form onSubmit={this.submitHandler}>
-					<h1 className="login-heading">Login </h1>
-					{console.log(this.state.data)}
+					<div className="text-center my-3 h1">Login</div>
 					<div className="form">
 						<div className="form-group">
 							<label>Enter Your Email ID: </label>

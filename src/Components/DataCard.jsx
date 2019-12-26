@@ -15,19 +15,14 @@ export const DataCard = ({props, data}) => {
   return (
     <div>
       <React.Fragment>
-        <div>
-          
-        </div>
-        
         <div className="cardView">
           <div style={{float: "left"}}>{data.id}</div>
           <div>
             <button className="handlebtn btn btn-primary" onClick={handleBody}> body</button>
             <button className="handlebtn btn btn-primary" onClick={handleTitle}> title</button>
-            <div className="clear"><div style={toggleBody ? block : hidden} >{data.body}</div></div>
-            <div  className="clear"><div style={toggleTitle ? block : hidden} >{data.title}</div></div>
+            <div  className="clear font-weight-bold mb-2 p-2"><div style={toggleTitle ? block : hidden} >{data.title}</div></div>
+            <div className="clear p-2"><div style={toggleBody ? block : hidden} >{data.body}</div></div>
           </div>
-         
         </div>
       </React.Fragment>
     </div>

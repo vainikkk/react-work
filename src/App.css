@@ -14,7 +14,7 @@
 }
 .login-heading{
   text-align: center;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 .navigation{
   float: right;
@@ -31,6 +31,9 @@
   text-decoration: none;
   font-size: 27px;
 }
+/* .nav{
+  background-color: burlywood;
+} */
 .btnlogout{
   color: #000000;
   text-align: center;
@@ -42,6 +45,7 @@
 .form{
   max-width: 500px;
   margin:auto;
+  padding:20px;
 }
 .site-name{
   clear: right;
@@ -57,9 +61,8 @@
 }
 .App-Container{
   background-color: azure;
+  clear: both;
   overflow: hidden;
-  margin: auto;
-  padding: 40px;
 }
 .App-footer{
   background-color: rgb(184, 184, 184);
@@ -73,6 +76,7 @@
 .persons{
   margin: 0 20px;
   text-align: left;
+  clear: both;
 }
 .personNumber{
   font-size: 50px;

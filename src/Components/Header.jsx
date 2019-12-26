@@ -22,7 +22,7 @@ class Header extends React.Component {
 				) : (
 						<div className="navigation">
 							<div className="navigation-right"><Link to="/about">About</Link></div>
-							<div className="navigation-right"><Link to="/dashboard">Dashboard</Link></div>
+							<div className="navigation-right"><Link to="/post">Dashboard</Link></div>
 							<div className="navigation-right btnlogout" onClick={this.deleteStorege}>Log Out</div>
 						</div>
 					)}
