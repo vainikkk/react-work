@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter, Link } from "react-router-dom";
 class Header extends React.Component {
 	isLoggedIn = () => {
-		return localStorage.getItem("Email") == null;
+		return localStorage.getItem("tokan") == null;
 	}
 	deleteStorege = (e) => {
 		e.preventDefault();
@@ -16,6 +16,7 @@ class Header extends React.Component {
 				{this.isLoggedIn() ?  (
 					<div className="navigation">
 						<Link to="/about">About</Link>
+						<Link to="/signup">Sign up</Link>
 						<Link to="/">Log In</Link>
 					</div>
 				) : (

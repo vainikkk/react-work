@@ -96,6 +96,7 @@
 .submitbtn{
   background-color: rgb(184, 184, 184);
   margin: 20px 0 0 0;
+  color: black;
   border-color: rgb(184, 184, 184);
 }
 .handlebtn{
@@ -111,4 +112,8 @@
 .homepage{
   text-align: center;
   margin: 100px 0 100px 0;
+}
+.signup{
+  max-width: 500px;
+  margin: auto;
 }

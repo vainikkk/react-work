@@ -9,6 +9,7 @@ import './App.css';
 import Dashboard from './Components/Dashboard';
 import About from './Components/About';
 import NoMatch from './Components/NoMatch';
+import Signup   from './Components/Signup';
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,11 @@ class App extends React.Component {
         path: '/',
         exact: true,
         main: () => <Login />
+      },
+      {
+        path: '/signup',
+        exact: true,
+        main: () => <Signup />
       },
       {
         path: '/post',

@@ -7,11 +7,11 @@ class Post extends React.Component {
 			persons: []
 	}
 	componentWillMount() {
-			if (localStorage.getItem("Email") && localStorage.getItem("Password")) {
+			if (localStorage.getItem("tokan")) {
 				return true;
 			}
 			else {
-				this.props.history.push('/');
+				console.log(this.props)
 			}
 	}
 	componentDidMount() {
