@@ -1,4 +1,12 @@
+/* color 1 : #6c757d
+color 2 hover : #5a6268 
+body color 1 : #f0ffff*/
 
+.btn:hover{
+  background-color: #5a6268;
+  border-color: #5a6268;
+
+}
 .App {
   font-family: cursive;
 }
@@ -8,9 +16,10 @@
 }
 .App-Header{
   min-height: 66px;
-  background-color: rgb(184, 184, 184);
-  display: block;
-  position: relative;
+  background-color:  #6c757d;
+  position: fixed;
+  top:0;
+  width: 100%;
 }
 .login-heading{
   text-align: center;
@@ -18,16 +27,20 @@
 }
 .navigation{
   float: right;
-  overflow: hidden;
+  background-color: #6c757d;
 }
 .navigation-right{
   display: inline-block;
-
+  padding: 14px 16px;
+  border-radius: 5px;
+}
+.navigation-right:hover{
+  background-color: #5a6268;
 }
 .navigation a{
-  color: #000000;
+  color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 10px;
   text-decoration: none;
   font-size: 27px;
 }
@@ -35,7 +48,7 @@
   background-color: burlywood;
 } */
 .btnlogout{
-  color: #000000;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -48,33 +61,35 @@
   padding:20px;
 }
 .site-name{
+  font-size: 30px;
   clear: right;
   margin: 10px 0px 0px 10px;
   float: left;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .site-name:hover{
   text-decoration: none;
-  color: rgb(27, 27, 27);
+  color: white
 }
 .App-Container{
   background-color: azure;
   clear: both;
   overflow: hidden;
+  padding-top:75px;
 }
 .App-footer{
-  background-color: rgb(184, 184, 184);
-  height: 50px;
+  background-color:  #6c757d;
+  height: 65px;
   clear: both;
 }
 .footer-data{
   text-align: center;
-  margin: 0px;
+  color: white;
+  padding-top:10px
 }
 .persons{
-  margin: 0 20px;
   text-align: left;
   clear: both;
 }
@@ -98,17 +113,17 @@
 
 }
 .submitbtn{
-  background-color: rgb(184, 184, 184);
+  background-color:  #6c757d;
   margin: 20px 0 0 0;
-  color: black;
-  border-color: rgb(184, 184, 184);
+  color: white;
+  border-color:  #6c757d;
 }
 .handlebtn{
   float: right;
   margin: 0 10px 10px 10px;
-  background-color: rgb(184, 184, 184);
-  border-color: rgb(184, 184, 184);
-  color: black
+  background-color:  #6c757d;
+  border-color:  #6c757d;
+  color: white
 }
 .clear{
   clear: both;
@@ -120,4 +135,7 @@
 .signup{
   max-width: 500px;
   margin: auto;
+}
+.logo{
+  width: 50px;
 }

@@ -18,17 +18,16 @@ class Post extends React.Component {
 			}
 	}
 	componentDidMount() {
-			axios.get(`https://jsonplaceholder.typicode.com/posts`)
-					.then(res => {
-							const persons = res.data;
-							this.setState({ persons, loading:false });
-					}).catch(errors => console.log(errors))
+		axios.get(`https://jsonplaceholder.typicode.com/posts`)
+			.then(res => {
+					const persons = res.data;
+					this.setState({ persons, loading:false });
+			}).catch(errors => console.log(errors))
 	}
 	render() {
 		return (
-			<div className="persons">
+			<div className="persons App-Container">
 				{this.state.loading ? <div className="text-center"><img src={tenor} alt="loading"  /></div> : (<div>{this.state.persons.map((person) => <div key={person.id}><DataCard data={person} props={this.props} /></div>)}</div>)}
-				 
 			</div>
 		);
 	}

@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
+import castle from '../castle-white.png'
+
 class Header extends React.Component {
 	isLoggedIn = () => {
 		return localStorage.getItem("tokan") == null;
@@ -12,12 +14,12 @@ class Header extends React.Component {
 	render() {
 		return (
 			<div className="App-Header">
-				<Link to="/mysite"  className="site-name"><h1> My Website</h1></Link>
+				<Link to="/mysite"  className="site-name"><img src={castle} alt="logo" className="logo" /> My Website</Link>
 				{this.isLoggedIn() ?  (
 					<div className="navigation">
-						<Link to="/about">About</Link>
-						<Link to="/signup">Sign up</Link>
-						<Link to="/">Log In</Link>
+						<div className="navigation-right"><Link to="/about">About</Link></div>
+						<div className="navigation-right"><Link to="/signup">Sign up</Link></div>
+						<div className="navigation-right btnlogout"><Link to="/">Log In</Link></div>
 					</div>
 				) : (
 						<div className="navigation">

@@ -8,7 +8,6 @@ class Login extends React.Component {
 				data: [],
 				email: "",
 				password: "",
-				confirm: false,
 		}
 	}
 	componentDidMount(){
@@ -22,9 +21,6 @@ class Login extends React.Component {
 		this.setState({ [array]: val })
 	}
 
-	resetform = () => {
-		console.log("reset form function")
-	}
 	submitHandler = (event) => {
 		event.preventDefault();
 		this.state.data.map((value)=>{

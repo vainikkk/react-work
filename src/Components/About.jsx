@@ -5,14 +5,11 @@ const About = () => {
   return (
     <div className="homepage">
       <div className="text-danger h1 my-3">Welcome to my website</div>
-      {/* {console.log(data)} */}
-     {data && <div>
+      {data && <div>
         <div>{`Hello ${data.name}!`}</div>
         <div>{`Your Email id is : ${data.email}`}</div>
       </div>}
-      
     </div>
-
   )
 }
 

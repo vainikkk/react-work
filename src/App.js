@@ -13,55 +13,18 @@ import Signup   from './Components/Signup';
 
 class App extends React.Component {
   render() {
-    const routes = [
-      {
-        path: '/',
-        exact: true,
-        main: () => <Login />
-      },
-      {
-        path: '/signup',
-        exact: true,
-        main: () => <Signup />
-      },
-      {
-        path: '/post',
-        exact: true,
-        main: () => <Post />
-      },
-      {
-        path: '/mysite',
-        exact: true,
-        main: () => <Mysite />
-      },
-      {
-        path: '/about',
-        exact: true,
-        main: () => <About />
-      },
-      {
-        path: '/dashboard',
-        exact: true,
-        main: () => <Dashboard />
-      },
-      {
-        path: '/nomatch',
-        exact: true,
-        main: () => <NoMatch />
-      },
-    ]
     return (
       <div className="App">
         <Header />
           {console.log(this.props.date)}
           <Switch className="container">
-            {routes.map((route,index) => (
-              <Route 
-              key={index}
-              exact={route.exact}
-              children={<route.main />}
-              path={route.path} />
-            ))}
+            <Route exact path="/" component={Login} />
+            <Route exact path="/post" component={Post} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/nomatch" component={NoMatch} />
+            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/mysite" component={Mysite} />
           </Switch>
         <Footer />
       </div>

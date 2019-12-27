@@ -2,7 +2,7 @@ import React from 'react';
 function Footer(){
     return (
         <div className="App-footer">
-            <p className="footer-data">Copyright</p>
+            <div className="footer-data">Copyright</div>
         </div>
     );
 }

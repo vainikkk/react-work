@@ -34,10 +34,10 @@ export default withFormik({
       password
   }).then((response)=> {
     alert(`Hello ${response.data.name}! you are successfully register`)
+    resetForm();
   }).catch((error)=> {
     console.log(error)
   })
-  resetForm();
-    // console.log(props)
+  
   }
 })(Signup);
