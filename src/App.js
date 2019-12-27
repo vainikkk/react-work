@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Login from "./Components/Login";
-import Post from './Components/Post';
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import Login from "./Components/Signin/Login";
+import Post from './Components/Dashboard/Post';
 import Mysite from './Components/Mysite'
 import { Switch, Route } from "react-router-dom";
 import './App.css';
-import Dashboard from './Components/Dashboard';
+import Dashboard from './Components/Dashboard/Dashboard';
 import About from './Components/About';
 import NoMatch from './Components/NoMatch';
 import Signup   from './Components/Signup';

@@ -117,6 +117,7 @@ body color 1 : #f0ffff*/
   margin: 20px 0 0 0;
   color: white;
   border-color:  #6c757d;
+  width: 50%
 }
 .handlebtn{
   float: right;
@@ -135,7 +136,37 @@ body color 1 : #f0ffff*/
 .signup{
   max-width: 500px;
   margin: auto;
+  padding: 20px;
 }
 .logo{
   width: 50px;
+}
+.link{
+  text-align: center;
+  margin:10px;
+}
+.link a{
+  text-decoration: underline;
+  color: black;
+}
+.collapsemenu{
+  display: block;
+  margin: 10px 10px;
+}
+@media screen and (min-width: 680px) {
+  .collapsemenu{
+    display: none
+  }
+}
+@media screen and (max-width: 680px){
+  .collapsenavigation{
+    display: none;
+  }
+}
+a{
+  text-decoration: none;
+  color: black
+}
+a:hover{
+  text-decoration: none;
 }

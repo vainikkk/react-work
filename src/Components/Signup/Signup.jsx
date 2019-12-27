@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Form, Field, ErrorMessage } from 'formik'
 import Axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Signup = ({ isSubmitting }) => {
 
@@ -21,9 +22,9 @@ const Signup = ({ isSubmitting }) => {
         return null
       })
       if(!value){
-        error = "Email id is required"
+        error = "Required"
       }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)){
-        error = "Enter valid email id"
+        error = "Invalid email"
       }
     }
     return error;
@@ -34,7 +35,11 @@ const Signup = ({ isSubmitting }) => {
       {/* {console.log(errors)} */}
       <Form className="container">
         <div className="signup ">
-          <div className="text-center h1 my-3">Sign Up</div>
+          <div className="text-center h1 my-3">SIGN UP</div>
+          <hr style={{borderWidth: "10px", width:"30%"}} />
+          <div className="link">
+            <Link to='/'>Already have an account?</Link>
+          </div>
           <div className="mb-3">
             <label>Name:</label>
             <Field name="name" type="text" className="form-control" placeholder="Enter your full name" />

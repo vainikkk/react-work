@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { DataCard } from "./DataCard";
 import { withRouter } from 'react-router-dom'
-import tenor from '../tenor.gif'
+import tenor from '../../tenor.gif'
 
 class Post extends React.Component {
 	state = {

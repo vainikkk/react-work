@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 import Axios from 'axios';
+import { Link } from 'react-router-dom'
+
 class Login extends React.Component {
 	constructor(props) {
 		super(props);
@@ -47,7 +49,11 @@ class Login extends React.Component {
 		return (
 			<div className="App-Container">
 				<form onSubmit={this.submitHandler}>
-					<div className="text-center my-3 h1">Login</div>
+					<div className="text-center my-3 h1">SIGN IN</div>
+					<hr style={{borderWidth:"10px", width:"10%"}} />
+					<div className="link">
+							<span style={{textDecoration:"none"}}>Not a member yet?</span> <Link to='/signup'>Sign Up here</Link>
+					</div>
 					<div className="form">
 						<div className="form-group">
 							<label>Enter Your Email ID: </label>
@@ -58,8 +64,12 @@ class Login extends React.Component {
 							<div><input type="password" className="form-control" name="password" onChange={this.changeHandler} /></div>
 						</div>
 						<div className="text-center">
-							<input type="submit" className="submitbtn btn btn-primary" value="Login" />
+							<input type="submit" className="submitbtn btn btn-primary form-control" value="Login" />
 						</div>
+						<div className="text-center my-3 text-decoration-underline">
+								<Link to="/signup">Forgot password?</Link>
+						</div>
+						
 					</div>
 						
 				</form>

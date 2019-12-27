@@ -13,16 +13,16 @@ export default withFormik({
   }),
   
   validationSchema: Yup.object().shape({
-    name: Yup.string().min(3).required("Name is required "),
+    name: Yup.string().min(3).required("Required "),
     // email: Yup.string()
     //           .matches(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,"enetr valid email address")
     //           .required("Email id is required"),
     password: Yup.string()
                   .matches(/^[A-Za-z]\w{7,14}$/,"password must be contain 7 to 14 character exclude special charecter")
-                  .required("Password is required"),
+                  .required("Required"),
     confirm_password: Yup.string()
                           .oneOf([Yup.ref('password'), null],"Password don't match")
-                          .required('Password confirm is required')
+                          .required('Required')
   }),
 
   handleSubmit(values,  { setSubmitting, resetForm }){
