@@ -41,27 +41,27 @@ const Signup = ({ isSubmitting }) => {
             <Link to='/'>Already have an account?</Link>
           </div>
           <div className="mb-3">
-            <label>Name:</label>
-            <Field name="name" type="text" className="form-control" placeholder="Enter your full name" />
+            <label>Name<span style={{color:'red', marginLeft:"2px"}}>*</span></label>
+            <Field name="name" type="text" className="rounded-pill form-control" placeholder="Enter your full name" />
             <div className="text-danger"><ErrorMessage name="name" /></div>
           </div>
           <div className="mb-3">
-            <label>Email Id:</label>
-            <Field name="email" type="email" validate={validateEmail} className="form-control" placeholder="Enter your email id" />
+            <label>Email Id<span style={{color:'red', marginLeft:"2px"}}>*</span></label>
+            <Field name="email" type="email" validate={validateEmail} className="rounded-pill form-control" placeholder="Enter your email id" />
             <div className="text-danger"><ErrorMessage name="email" /></div>
           </div>
           <div className="mb-3">
-            <label>Password:</label>
-            <Field name="password" type="password" className="form-control" placeholder="Enter your password" />
+            <label>Password<span style={{color:'red', marginLeft:"2px"}}>*</span></label>
+            <Field name="password" type="password" className="rounded-pill form-control" placeholder="Enter your password" />
             <div className="text-danger"><ErrorMessage name="password" /></div>
           </div>
           <div className="mb-3">
-            <label>Confirm your password:</label>
-            <Field name="confirm_password" type="password" className="form-control" placeholder="confirm your password" />
+            <label>Re-Enter password<span style={{color:'red', marginLeft:"2px"}}>*</span></label>
+            <Field name="confirm_password" type="password" className="rounded-pill form-control" placeholder="Confirm your password" />
             <div className="text-danger"><ErrorMessage name="confirm_password" /></div>
           </div>
           <div className="text-center">
-            <button type="submit" disabled={isSubmitting} className="submitbtn btn btn-primary">Submit</button>
+            <button type="submit" disabled={isSubmitting} className="rounded-pill submitbtn btn btn-primary">Sign up</button>
           </div>
         </div>
       </Form>

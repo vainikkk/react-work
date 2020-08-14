@@ -25,19 +25,21 @@ export default withFormik({
                           .required('Required')
   }),
 
-  handleSubmit(values,  { setSubmitting, resetForm }){
+  handleSubmit: async (values,  { setSubmitting, resetForm }) => {
     const { name, email, password } = values
     console.log( name)
-    Axios.post("http://5dfb61d30301690014b8fa75.mockapi.io/sigup",{
-      name,
-      email,
-      password
-  }).then((response)=> {
-    alert(`Hello ${response.data.name}! you are successfully register`)
-    resetForm();
-  }).catch((error)=> {
-    console.log(error)
-  })
+    try {
+      const response = await Axios.post("http://5dfb61d30301690014b8fa75.mockapi.io/sigup",{
+        name,
+        email,
+        password
+      })
+      alert(`Hello ${response.data.name}! you are successfully register`)
+      resetForm();
+    }
+    catch(error){
+      console.log(error);
+    }
   
   }
 })(Signup);

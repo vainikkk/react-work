@@ -11,7 +11,7 @@ body color 1 : #f0ffff*/
   font-family: cursive;
 }
 .container{
-  margin: auto;
+  margin-top: 66px;
   padding: 20px;
 }
 .App-Header{
@@ -131,7 +131,6 @@ body color 1 : #f0ffff*/
 }
 .homepage{
   text-align: center;
-  margin: 100px 0 100px 0;
 }
 .signup{
   max-width: 500px;
